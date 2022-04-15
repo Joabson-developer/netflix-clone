@@ -1,0 +1,11 @@
+<div class="genrs">
+  <h2 class="genrs__title">{{ title }}</h2>
+  <ul class="genrs__list">
+    <li *ngFor="let item of items.results" class="genrs__list__item">
+      <img
+        [src]="'https://image.tmdb.org/t/p/w300' + item.poster_path"
+        [alt]="'Imagem do filme ' + item.name"
+      />
+    </li>
+  </ul>
+</div>

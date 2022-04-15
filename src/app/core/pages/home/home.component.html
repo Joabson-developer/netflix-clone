@@ -1,0 +1,12 @@
+<main class="home">
+  <featured-movie></featured-movie>
+
+  <ul *ngIf="movieList" class="home__lists">
+    <li
+      class="home__lists__item"
+      *ngFor="let movie of movieList | async; let i = index"
+    >
+      <movie-row [title]="movie.title" [items]="movie.items"></movie-row>
+    </li>
+  </ul>
+</main>
