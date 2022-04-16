@@ -30,6 +30,31 @@ export class GetMoviesTmdbService {
     return json;
   }
 
+  public async getMovieInfo(movieId: string, type: string): Promise<any> {
+    let info = {};
+
+    if (movieId) {
+      switch (type) {
+        case 'movie':
+          info = await this.basicFetch(
+            `/movie/${movieId}?language=${this.getLocale}&api_key=${this.getApiKey}`
+          );
+          break;
+
+        case 'tv':
+          info = await this.basicFetch(
+            `/tv/${movieId}?language=${this.getLocale}&api_key=${this.getApiKey}`
+          );
+          break;
+
+        default:
+          break;
+      }
+    }
+
+    return info;
+  }
+
   public async getMovieList(): Promise<Array<HomeListMovie>> {
     return [
       {

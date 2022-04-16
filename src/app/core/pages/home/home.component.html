@@ -1,5 +1,8 @@
 <main class="home">
-  <featured-movie></featured-movie>
+  <featured-movie
+    *ngIf="featuredData"
+    [featuredData]="featuredData | async"
+  ></featured-movie>
 
   <ul *ngIf="movieList" class="home__lists">
     <li
