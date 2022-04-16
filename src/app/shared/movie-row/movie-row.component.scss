@@ -1,11 +1,45 @@
 .genrs {
   padding: 0 30px;
+  position: relative;
+
+  &:hover {
+    .genrs__list__button-back,
+    .genrs__list__button-next {
+      opacity: 1;
+    }
+  }
+
   &__title {
   }
 
   &__list {
     display: flex;
     overflow: hidden;
+    transition: all 0.5s ease;
+
+    .genrs__list__button-back,
+    .genrs__list__button-next {
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      display: flex;
+      font-size: 50px;
+      height: 225px;
+      justify-content: center;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      transition: all 0.5s ease;
+      width: 40px;
+      z-index: 99;
+    }
+
+    .genrs__list__button-back {
+      left: 0;
+    }
+    .genrs__list__button-next {
+      right: 0;
+    }
 
     &__item {
       width: 150px;
