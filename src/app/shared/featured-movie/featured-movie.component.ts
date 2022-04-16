@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'featured-movie',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./featured-movie.component.scss'],
 })
 export class FeaturedMovieComponent implements OnInit {
+  @Input() featuredData: any;
   constructor() {}
 
   ngOnInit(): void {}

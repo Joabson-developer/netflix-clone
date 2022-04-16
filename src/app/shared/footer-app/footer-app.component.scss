@@ -1,0 +1,71 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  gap: 7px;
+
+  span {
+    display: flex;
+    align-items: center;
+
+    mat-icon,
+    a {
+      margin: 0 5px;
+    }
+
+    mat-icon {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        animation: heartbeat 0.5s infinite;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #fff;
+      transition: all 0.5s ease;
+      padding: 3px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .linkedin {
+        opacity: 0;
+        width: 0;
+        transition: all 0.5s ease;
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: #111;
+
+        .linkedin {
+          opacity: 1;
+          width: 18px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    font-size: 20px;
+    transition: all 0.1s ease;
+  }
+  100% {
+    font-size: 30px;
+    transition: all 0.1s ease;
+  }
+  0% {
+    font-size: 20px;
+    transition: all 0.1s ease;
+  }
+}
