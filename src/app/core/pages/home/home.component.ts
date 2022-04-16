@@ -30,8 +30,6 @@ export class HomeComponent implements OnInit {
         chosen.id,
         'tv'
       );
-
-      console.log(this.featuredData);
     });
   }
 }
