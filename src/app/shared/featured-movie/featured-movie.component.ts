@@ -9,12 +9,5 @@ export class FeaturedMovieComponent implements OnInit {
   @Input() featuredData: any;
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.featuredData);
-  }
-
-  public getFullYear(date: string): number {
-    const firstDate = new Date(date);
-    return firstDate.getFullYear();
-  }
+  ngOnInit(): void {}
 }

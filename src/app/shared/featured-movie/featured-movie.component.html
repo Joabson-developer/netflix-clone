@@ -13,7 +13,7 @@
           {{ featuredData?.vote_average }} pontos
         </span>
         <span class="featured__info__year">{{
-          getFullYear(featuredData?.first_air_date)
+          featuredData?.first_air_date | getFullYear
         }}</span>
         <span class="featured__info__seasons">
           {{ featuredData?.number_of_seasons }} temporada{{
@@ -22,7 +22,7 @@
         </span>
       </div>
       <p class="featured__description">
-        {{ featuredData?.overview }}
+        {{ featuredData?.overview | maxLength: 400 }}
       </p>
 
       <div class="featured__buttons">

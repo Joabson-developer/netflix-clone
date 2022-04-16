@@ -17,6 +17,8 @@ import { BackgroundImageDirective } from './directive/background-image.directive
 
 // Angular Material
 import { MatIconModule } from '@angular/material/icon';
+import { GetFullYearPipe } from './pipes/date/get-full-year.pipe';
+import { MaxLengthPipe } from './pipes/string/max-length.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { MatIconModule } from '@angular/material/icon';
     MovieRowComponent,
     FeaturedMovieComponent,
     BackgroundImageDirective,
+    GetFullYearPipe,
+    MaxLengthPipe,
   ],
   imports: [
     BrowserModule,
