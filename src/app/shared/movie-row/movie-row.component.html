@@ -1,6 +1,36 @@
 <div class="genrs">
   <h2 class="genrs__title">{{ title }}</h2>
-  <ul class="genrs__list">
+
+  <ul
+    class="genrs__list"
+    [attr.style]="
+      'width: ' +
+      items.results.length * 150 +
+      'px; margin-left: ' +
+      scrollX +
+      'px'
+    "
+  >
+    <mat-icon
+      (click)="handleLeftArrow()"
+      class="genrs__list__button-back"
+      aria-hidden="false"
+      aria-label="Navegar para trás"
+      role="button'"
+    >
+      navigate_before
+    </mat-icon>
+
+    <mat-icon
+      (click)="handleRightArrow(items.results.length * 150)"
+      class="genrs__list__button-next"
+      aria-hidden="false"
+      aria-label="Navegar para frente"
+      role="button'"
+    >
+      navigate_next
+    </mat-icon>
+
     <li *ngFor="let item of items.results" class="genrs__list__item">
       <img
         [src]="'https://image.tmdb.org/t/p/w300' + item.poster_path"

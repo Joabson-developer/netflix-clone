@@ -1,5 +1,10 @@
 <main class="home">
-  <featured-movie></featured-movie>
+  <header-movie></header-movie>
+
+  <featured-movie
+    *ngIf="featuredData"
+    [featuredData]="featuredData | async"
+  ></featured-movie>
 
   <ul *ngIf="movieList" class="home__lists">
     <li
@@ -9,4 +14,10 @@
       <movie-row [title]="movie.title" [items]="movie.items"></movie-row>
     </li>
   </ul>
+
+  <footer-app></footer-app>
+
+  <div *ngIf="!featuredData" class="home__spinner">
+    <spinner></spinner>
+  </div>
 </main>

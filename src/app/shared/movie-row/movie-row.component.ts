@@ -9,12 +9,32 @@ import { HomeListMovie } from 'src/app/interfaces/home-list-movie.interface';
   styleUrls: ['./movie-row.component.scss'],
 })
 export class MovieRowComponent implements OnInit {
+  public scrollX: number = 0;
+
   @Input() title: string = '';
   @Input() items!: any;
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.items);
+  ngOnInit(): void {}
+
+  public handleLeftArrow(): void {
+    let x = this.scrollX + Math.round(window.innerWidth / 2);
+
+    if (x > 0) {
+      x = 0;
+    }
+
+    this.scrollX = x;
+  }
+
+  public handleRightArrow(listWidth: number): void {
+    let x = this.scrollX - Math.round(window.innerWidth / 2);
+
+    if (window.innerWidth - listWidth > x) {
+      x = window.innerWidth - listWidth - 60;
+    }
+
+    this.scrollX = x;
   }
 }

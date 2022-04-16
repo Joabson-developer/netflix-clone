@@ -1,8 +1,21 @@
+body {
+  overflow: hidden;
+}
 .home {
-  padding: 0 30px;
   &__lists {
+    margin-top: -150px;
     &__item {
       margin-bottom: 30px;
     }
+  }
+
+  &__spinner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
   }
 }

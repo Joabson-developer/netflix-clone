@@ -1,0 +1,36 @@
+.header-movie {
+  align-items: center;
+  background: transparent;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.5s ease;
+
+  &.header-movie--scrolled {
+    background: #141414;
+  }
+
+  &__logo,
+  &__avatar {
+    height: 30px;
+    a {
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  &__avatar {
+    a {
+      img {
+        border-radius: 5px;
+      }
+    }
+  }
+}
