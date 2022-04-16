@@ -22,6 +22,7 @@ import { ColorDirective } from './directive/color/color.directive';
 // Pipes
 import { GetFullYearPipe } from './pipes/date/get-full-year.pipe';
 import { MaxLengthPipe } from './pipes/string/max-length.pipe';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MaxLengthPipe } from './pipes/string/max-length.pipe';
     HeaderMovieComponent,
     FooterAppComponent,
     ColorDirective,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,

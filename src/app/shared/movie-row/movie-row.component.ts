@@ -9,7 +9,7 @@ import { HomeListMovie } from 'src/app/interfaces/home-list-movie.interface';
   styleUrls: ['./movie-row.component.scss'],
 })
 export class MovieRowComponent implements OnInit {
-  public scrollX: number = -400;
+  public scrollX: number = 0;
 
   @Input() title: string = '';
   @Input() items!: any;

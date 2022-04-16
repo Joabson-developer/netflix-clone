@@ -85,4 +85,31 @@
     font-size: 18px;
     color: #999;
   }
+
+  @media (max-width: 760px) {
+    height: 80vh;
+
+    &__name {
+      font-size: 40px;
+    }
+
+    &__info {
+      font-size: 16px;
+    }
+
+    &__description {
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+    &__buttons {
+      .button {
+        font-size: 16px;
+      }
+    }
+
+    &__genres {
+      font-size: 14px;
+    }
+  }
 }

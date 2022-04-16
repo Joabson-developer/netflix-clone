@@ -9,9 +9,6 @@
     }
   }
 
-  &__title {
-  }
-
   &__list {
     display: flex;
     overflow: hidden;
@@ -24,14 +21,21 @@
       cursor: pointer;
       display: flex;
       font-size: 50px;
+      opacity: 0;
       height: 225px;
       justify-content: center;
-      opacity: 0;
       overflow: hidden;
       position: absolute;
       transition: all 0.5s ease;
       width: 40px;
       z-index: 99;
+    }
+
+    @media (max-width: 760px) {
+      .genrs__list__button-back,
+      .genrs__list__button-next {
+        opacity: 1;
+      }
     }
 
     .genrs__list__button-back {
